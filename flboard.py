@@ -10,7 +10,7 @@ SECRET_KEY = 'ir9guewg8ey8f04(*&^&@#@$$hgfy%WEFE*((*^$#%$uoei&^y8e9rujhEJFUEFbdf
 app = Flask(__name__)
 app.config.from_object(__name__)
 app.config.update(dict(DATABASE=os.path.join(app.root_path, 'flboard.db')))
-app.config['UPLOAD_FOLDER']="static\images"
+app.config['UPLOAD_FOLDER']="static/images/"
 
 
 def connect_db():
