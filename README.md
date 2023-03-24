@@ -4,10 +4,10 @@ My project is an anonymous imageboard where people can communicate without regis
 
 To use it, install the library. Write in the terminal:
 
-pip install flask
+pip3 install flask
 
 To run the project, in the directory with this project, write in the terminal:
 
-python flboard.py
+python3 flboard.py
 
 You also need to install sqlite.
