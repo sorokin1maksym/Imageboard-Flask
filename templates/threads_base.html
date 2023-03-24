@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Rach.ch - {{ title }}</title>
+    {% endblock title %}
+</head>
+<body>
+    {% block content %}
+    <header class="main-header">
+        <a href="/">Back to main page</a>   &nbsp
+        Topics:   &nbsp
+        {% for m in menu %}
+        <a href="{{m.url}}">{{m.name}}</a>   &nbsp
+        {% endfor %}
+    </header>
+    <h1 class="title">Welcome to {{title}} !</h1>
+    <br>
+    {% for category, msg in get_flashed_messages(True) %}
+    <div class="flash {{category}}"><h4>{{msg}}</h4></div>
+    {% endfor %}
+    <form action="{{action}}" method="post" class="create-thread" enctype='multipart/form-data'>
+    <p><label class="thread">Thread name: </label></p>
+    <p><input class="thread-name" type="text" name="thread-name" value="" required /></p>
+    <p><label class="thread">Choose image: </label></p>
+    <p><input type="file" name="thread-image" /></p>
+    <p><label class="thread">Thread text:</label></p>
+    <p><textarea class="text-thread" name="thread-text" cols="40" rows="10" required></textarea></p>
+    <p><input type="submit" value="Create thread"></p>
+    </form>
+    <br>
+    {% for thread in threads %}
+    <div class="thread-page">
+    <p>Thread number: {{ thread['id_thread'] }} Date: {{ thread['date_thread'] }}</p>
+    <p><img src="/static/images/{{thread['img_thread']}}" alt=""><h2>{{ thread['name_thread'] }}</h2></p>
+    <p>{{ thread['text_thread'] }}</p>
+    <p class="reply"><a href="/{{ topic }}/{{thread['id_thread']}}">Go to discussion</a></p>
+    </div>
+    {% endfor %}
+    {% endblock content %}
+</body>
+</html>

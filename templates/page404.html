@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{super()}}
+<p class="o4o">Error 404... We are sorry...</p>
+<br>
+<p class="o4o"><a href="{{url_for('index')}}">Take me back to main page</a></p>
+{% endblock content %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <title>
+        {% for name in names %}
+        Rach.ch - {{name['name_thread']}}
+        {% endfor %}
+    </title>
+</head>
+<body>
+    {% block content %}
+    <header class="main-header">
+    <a href="/">Back to main page</a>   &nbsp
+    Topics:   &nbsp
+    {% for m in menu %}
+    <a href="{{m.url}}">{{m.name}}</a>   &nbsp
+    {% endfor %}
+    </header>
+    {% for description in descriptions %}
+    <div class="thread-description">
+    <p>ID: {{description['id_thread']}} Date: {{description['date_thread']}}</p>
+    <img src="/static/images/{{description['img_thread']}}" alt="">
+    <h1 class="title">{{description['name_thread']}}</h1>
+    <p>{{description['text_thread']}}</p>
+    </div>
+    {% endfor %}
+    <br>
+    {% for category, msg in get_flashed_messages(True) %}
+    <div class="flash {{category}}"><h4>{{msg}}</h4></div>
+    {% endfor %}
+    <form action="{{action}}" method="post" class="create-thread" enctype='multipart/form-data'>
+        <p><label class="thread">Choose image: </label></p>
+        <p><input type="file" name="post-image" /></p>
+        <p><label class="thread">Post text:</label></p>
+        <p><textarea class="text-thread" name="post-text" cols="40" rows="10" required></textarea></p>
+        <p><input type="submit" value="Create post"></p>
+    </form>
+    {% for post in posts %}
+    <div class="thread-page">
+    <p>Post number: {{ post['id_post'] }} Date: {{ post['date_post'] }}</p>
+    <img src="/static/images/{{post['img_post']}}" alt="">
+    <p>{{ post['text_post'] }}</p>
+    </div>
+    {% endfor %}
+    {% endblock content %}
+</body>
+</html>

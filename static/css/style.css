@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body {
+    background: #13151A;
+    color: #B6DEDE;
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+h1.title {
+    text-align: center;
+    color: #8FBCBB;
+    font-weight: bold;
+}
+
+h3.topics, h3.creators, p.creators, a.creators {
+    text-align: center;
+}
+
+.parent-translate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.translate-page {
+    text-align: center;
+    border: 2px solid #181b21;
+    border-radius: 10px;
+    width: 50%;
+    padding: 1%;
+    margin: 2%;
+    background: #181b21;
+    transition: 0.5s;
+}
+
+div.translate-page:hover {
+    border: 2px solid #81A1C1;
+}
+
+.center {
+    color: #82BCBB;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.center {
+    text-align: center;
+    color: #abe4e4;
+    font-weight: normal;
+}
+
+select {
+    background: #8FBCBB;
+    color: #1f232b;
+    font-family: Roboto;
+    border: 0px;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.class-option {
+    background: #1f232b;
+    color: #8FBCBB;
+    font-family: Roboto;
+    border: 0px;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.form-submit-button {
+	background: #8FBCBB;
+    color: #1f232b;
+    font-family: Roboto;
+    border: 0px;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.form-submit-button:hover {
+	background: #bce7e8;
+}
+
+a {
+    color: #98BE8C;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #81A1C1;
+    text-decoration: none;
+}
+
+.main-header {
+    border: 2px solid #252933;
+    background: #1a1d24;
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+img {
+    object-fit: scale-down;
+    max-width: 30%;
+    border: 2px solid #181b21;
+    border-radius: 10px;
+}
+
+div.content {
+    margin: 7% 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #252933;
+    background: #101216;
+}
+
+ul {
+    list-style-type: none;
+}
+
+form.create-thread {
+    margin: 2%;
+    text-align: center;
+}
+
+input.thread-name {
+    color: #CDDECD;
+    font-family: Roboto;
+    background: #181b21;
+    border: 2px solid #181B22;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 5px 10px;
+    width: 25%;
+    font-size: 16px;
+}
+
+input.thread-name:focus {
+    outline: none;
+    border: 2px solid #81A1C1;
+}
+
+input.thread-name:hover {
+    outline: none;
+    border: 2px solid #81A1C1;
+}
+
+textarea.text-thread {
+    color: #CDDECD;
+    letter-spacing: 0px;
+    font-family: Roboto;
+    background: #181b21;
+    border: 2px solid #181B22;
+    border-radius: 10px;
+    resize: none;
+    transition: 0.5s;
+    padding: 10px;
+    width: 25%;
+    font-size: 16px;
+}
+
+textarea.text-thread:focus {
+    outline: none;
+    border: 2px solid #81A1C1;
+}
+
+textarea.text-thread:hover {
+    outline: none;
+    border: 2px solid #81A1C1;
+}
+
+input[type=submit] {
+    background: #8FBCBB;
+    color: #1f232b;
+    font-family: Roboto;
+    border: 0px;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background: #bce7e8;
+}
+
+label.thread {
+    font-weight: bold;
+    color: #82BCBB;
+}
+
+input::file-selector-button {
+    text-align: center;
+    background: #8FBCBB;
+    color: #1f232b;
+    border: 0px;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+input::file-selector-button:hover {
+    background: #bce7e8;
+}
+
+.flash {
+    text-align: center;
+}
+
+.flash.success {
+    color: #A3BE8C;
+}
+
+.flash.error {
+    color: #BF616A;
+}
+
+.o4o {
+    text-align: center;
+}
+
+div.thread-page {
+    border: 2px solid #181b21;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2%;
+    background: #181b21;
+    transition: 0.5s;
+}
+
+div.thread-page:hover {
+    border: 2px solid #81A1C1;
+}
+
+.thread-description {
+    text-align: center;
+    border-top: 2px solid #252933;
+    border-bottom: 2px solid #252933;
+    transition: 0.5s;
+}
+
+.thread-description:hover {
+    background: #181b21;
+}

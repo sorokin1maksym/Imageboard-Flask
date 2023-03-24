@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h3 class="topics">Topics for discussion.</h3>
+<div class="content">
+<div>
+<ul>
+{% for m in menu1 %}
+<li><a href="{{m.url}}">{{m.name}}</a>   &nbsp</li>
+{% endfor %}
+</ul>
+</div>
+<div>
+<ul>
+{% for m in menu2 %}
+<li><a href="{{m.url}}">{{m.name}}</a>   &nbsp   &nbsp</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+{% endblock content %}
